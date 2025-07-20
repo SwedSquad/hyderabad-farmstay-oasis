@@ -52,25 +52,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Farm house theme colors
-				nature: {
-					DEFAULT: 'hsl(var(--nature-green))',
-					dark: 'hsl(var(--forest-dark))'
-				},
-				earth: 'hsl(var(--earth-warm))',
-				gold: 'hsl(var(--gold-accent))'
-			},
-			backgroundImage: {
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-nature': 'var(--gradient-nature)',
-				'gradient-sunset': 'var(--gradient-sunset)'
-			},
-			boxShadow: {
-				nature: 'var(--shadow-nature)',
-				card: 'var(--shadow-card)',
-				button: 'var(--shadow-button)'
-			},
-			sidebar: {
+				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
 					primary: 'hsl(var(--sidebar-primary))',
