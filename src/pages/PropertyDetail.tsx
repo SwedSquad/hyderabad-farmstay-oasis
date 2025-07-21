@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { properties } from "@/data/properties";
 import {
   MapPin,
@@ -453,6 +454,8 @@ const PropertyDetail = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

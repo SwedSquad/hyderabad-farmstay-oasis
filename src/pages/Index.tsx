@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
 import { MapPin, Star, Users, TreePine, Sparkles, Phone } from "lucide-react";
@@ -185,6 +186,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      
+      <Footer />
     </div>
   );
 };

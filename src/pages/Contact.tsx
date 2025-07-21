@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
 import { MapPin, Phone, Mail, Clock, TreePine, Send } from "lucide-react";
@@ -281,6 +282,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

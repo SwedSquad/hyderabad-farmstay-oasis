@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import PropertyCard from "@/components/PropertyCard";
 import { properties } from "@/data/properties";
 import { Search, Filter, SlidersHorizontal, MapPin, Star } from "lucide-react";
@@ -357,6 +358,8 @@ const Listings = () => {
           </Card>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

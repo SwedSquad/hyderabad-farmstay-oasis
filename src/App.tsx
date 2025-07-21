@@ -12,6 +12,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import SellerDashboard from "./pages/SellerDashboard";
 import ReviewSubmission from "./pages/ReviewSubmission";
 import NotFound from "./pages/NotFound";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <WhatsAppFloat />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
