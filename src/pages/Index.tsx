@@ -37,7 +37,7 @@ const Index = () => {
             corporate retreats, and special celebrations.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" asChild className="bg-white text-primary hover:bg-white/90">
+            <Button variant="hero" size="xl" asChild className="bg-primary text-white hover:bg-primary/90 shadow-lg">
               <Link to="#properties">
                 <TreePine className="w-5 h-5" />
                 Explore Properties
