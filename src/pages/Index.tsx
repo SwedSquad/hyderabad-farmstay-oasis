@@ -37,13 +37,13 @@ const Index = () => {
             corporate retreats, and special celebrations.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="hero" size="xl" asChild className="bg-white text-primary hover:bg-white/90">
               <Link to="#properties">
                 <TreePine className="w-5 h-5" />
                 Explore Properties
               </Link>
             </Button>
-            <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="outline" size="xl" className="border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-primary">
               <Phone className="w-5 h-5" />
               Call Now: +91 99999 88888
             </Button>
