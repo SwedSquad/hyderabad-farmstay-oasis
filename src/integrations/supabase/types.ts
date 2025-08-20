@@ -14,6 +14,136 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_requests: {
+        Row: {
+          admin_notes: string | null
+          email: string
+          id: string
+          location: string
+          phone: string
+          property_id: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          seller_id: string
+          status: string
+          submitted_at: string
+        }
+        Insert: {
+          admin_notes?: string | null
+          email: string
+          id?: string
+          location: string
+          phone: string
+          property_id: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          seller_id: string
+          status?: string
+          submitted_at?: string
+        }
+        Update: {
+          admin_notes?: string | null
+          email?: string
+          id?: string
+          location?: string
+          phone?: string
+          property_id?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          seller_id?: string
+          status?: string
+          submitted_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contact_requests_property_id_fkey"
+            columns: ["property_id"]
+            isOneToOne: false
+            referencedRelation: "properties"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      global_settings: {
+        Row: {
+          created_at: string
+          id: string
+          setting_key: string
+          setting_value: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          setting_key: string
+          setting_value: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          setting_key?: string
+          setting_value?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      inquiries: {
+        Row: {
+          check_in: string | null
+          check_out: string | null
+          created_at: string
+          customer_email: string
+          customer_name: string
+          customer_phone: string
+          guests: number | null
+          id: string
+          message: string
+          property_id: string
+          seller_id: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          check_in?: string | null
+          check_out?: string | null
+          created_at?: string
+          customer_email: string
+          customer_name: string
+          customer_phone: string
+          guests?: number | null
+          id?: string
+          message: string
+          property_id: string
+          seller_id: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          check_in?: string | null
+          check_out?: string | null
+          created_at?: string
+          customer_email?: string
+          customer_name?: string
+          customer_phone?: string
+          guests?: number | null
+          id?: string
+          message?: string
+          property_id?: string
+          seller_id?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "inquiries_property_id_fkey"
+            columns: ["property_id"]
+            isOneToOne: false
+            referencedRelation: "properties"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -58,6 +188,190 @@ export type Database = {
           username?: string | null
         }
         Relationships: []
+      }
+      properties: {
+        Row: {
+          active_tags: string[] | null
+          amenities: string[]
+          bathrooms: number
+          bedrooms: number
+          contact_approved: boolean | null
+          created_at: string
+          description: string
+          features: string[] | null
+          hall: number
+          id: string
+          images: string[]
+          is_active: boolean | null
+          kitchen: number
+          location: string
+          map_embed: string | null
+          max_guests: number
+          name: string
+          rating: number | null
+          review_count: number | null
+          seller_id: string
+          tags: string[] | null
+          type: string
+          updated_at: string
+          weekday_price: number
+          weekend_price: number
+        }
+        Insert: {
+          active_tags?: string[] | null
+          amenities: string[]
+          bathrooms: number
+          bedrooms: number
+          contact_approved?: boolean | null
+          created_at?: string
+          description: string
+          features?: string[] | null
+          hall: number
+          id?: string
+          images: string[]
+          is_active?: boolean | null
+          kitchen: number
+          location: string
+          map_embed?: string | null
+          max_guests: number
+          name: string
+          rating?: number | null
+          review_count?: number | null
+          seller_id: string
+          tags?: string[] | null
+          type: string
+          updated_at?: string
+          weekday_price: number
+          weekend_price: number
+        }
+        Update: {
+          active_tags?: string[] | null
+          amenities?: string[]
+          bathrooms?: number
+          bedrooms?: number
+          contact_approved?: boolean | null
+          created_at?: string
+          description?: string
+          features?: string[] | null
+          hall?: number
+          id?: string
+          images?: string[]
+          is_active?: boolean | null
+          kitchen?: number
+          location?: string
+          map_embed?: string | null
+          max_guests?: number
+          name?: string
+          rating?: number | null
+          review_count?: number | null
+          seller_id?: string
+          tags?: string[] | null
+          type?: string
+          updated_at?: string
+          weekday_price?: number
+          weekend_price?: number
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          admin_notes: string | null
+          comment: string
+          customer_email: string | null
+          customer_name: string
+          id: string
+          property_id: string
+          rating: number
+          reviewed_at: string | null
+          reviewed_by: string | null
+          status: string
+          submitted_at: string
+        }
+        Insert: {
+          admin_notes?: string | null
+          comment: string
+          customer_email?: string | null
+          customer_name: string
+          id?: string
+          property_id: string
+          rating: number
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string
+          submitted_at?: string
+        }
+        Update: {
+          admin_notes?: string | null
+          comment?: string
+          customer_email?: string | null
+          customer_name?: string
+          id?: string
+          property_id?: string
+          rating?: number
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string
+          submitted_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_property_id_fkey"
+            columns: ["property_id"]
+            isOneToOne: false
+            referencedRelation: "properties"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tag_requests: {
+        Row: {
+          admin_notes: string | null
+          id: string
+          payment_screenshot: string | null
+          price: number
+          property_id: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          seller_id: string
+          status: string
+          submitted_at: string
+          tag_name: string
+        }
+        Insert: {
+          admin_notes?: string | null
+          id?: string
+          payment_screenshot?: string | null
+          price: number
+          property_id: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          seller_id: string
+          status?: string
+          submitted_at?: string
+          tag_name: string
+        }
+        Update: {
+          admin_notes?: string | null
+          id?: string
+          payment_screenshot?: string | null
+          price?: number
+          property_id?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          seller_id?: string
+          status?: string
+          submitted_at?: string
+          tag_name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tag_requests_property_id_fkey"
+            columns: ["property_id"]
+            isOneToOne: false
+            referencedRelation: "properties"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       user_roles: {
         Row: {
